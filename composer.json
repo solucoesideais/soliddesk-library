@@ -1,0 +1,11 @@
+{
+  "name": "solid-desk/eloquent",
+  "require": {
+    "illuminate/database": "~5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Library\\": "src"
+    }
+  }
+}
