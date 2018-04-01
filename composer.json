@@ -1,7 +1,7 @@
 {
   "name": "solid-desk/library",
   "require": {
-    "illuminate/database": "~5.6"
+    "laravel/framework": "~5.6"
   },
   "autoload": {
     "psr-4": {
