@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Library\Eloquent\Auth\Administrator;
 
 class CreateAdministratorsTable extends Migration
 {
@@ -19,6 +20,12 @@ class CreateAdministratorsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        Administrator::create([
+            'name' => 'Administrator',
+            'email' => 'root',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm',
+        ]);
     }
 
     /**
