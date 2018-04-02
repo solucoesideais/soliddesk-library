@@ -14,7 +14,7 @@ use Library\Eloquent\Auth\User;
 |
 */
 
-$factory->define(Manager::class, function (Faker $faker) {
+$factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
