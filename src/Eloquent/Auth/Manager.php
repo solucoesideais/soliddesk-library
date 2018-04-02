@@ -9,6 +9,8 @@ use Library\Eloquent\Department;
 
 class Manager extends User
 {
+    protected $table = 'users';
+
     protected static function boot()
     {
         parent::boot();
