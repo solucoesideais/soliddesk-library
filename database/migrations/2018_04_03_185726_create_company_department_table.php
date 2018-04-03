@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCompaniesDepartmentsTable extends Migration
+class CreateCompanyDepartmentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCompaniesDepartmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('companies_departments', function (Blueprint $table) {
+        Schema::create('company_department', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('company_id');
             $table->unsignedInteger('department_id');
