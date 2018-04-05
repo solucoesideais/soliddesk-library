@@ -5,6 +5,7 @@ namespace Library\Eloquent\Auth;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Library\Eloquent\Company;
 use Library\Eloquent\Department;
 
 class User extends Authenticatable
@@ -19,12 +20,18 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     public function department()
     {
         return $this->belongsTo(Department::class)
             ->withDefault(['name' => '']);
+    }
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
     }
 }
