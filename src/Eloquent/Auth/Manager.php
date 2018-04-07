@@ -2,10 +2,7 @@
 
 namespace Library\Eloquent\Auth;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Library\Eloquent\Department;
+use Library\Auth\UserType;
 
 class Manager extends User
 {
@@ -16,7 +13,7 @@ class Manager extends User
         parent::boot();
 
         static::addGlobalScope(function ($query) {
-            $query->where('is_manager', true);
+            $query->where('type', UserType::MANAGER);
         });
     }
 }
