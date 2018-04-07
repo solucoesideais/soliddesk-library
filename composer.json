@@ -12,7 +12,8 @@
     "laravel": {
       "providers": [
         "Library\\Providers\\EloquentFactoriesServiceProvider",
-        "Library\\Providers\\MigrationsServiceProvider"
+        "Library\\Providers\\MigrationsServiceProvider",
+        "Library\\Providers\\TimezoneServiceProvider"
       ]
     }
   }

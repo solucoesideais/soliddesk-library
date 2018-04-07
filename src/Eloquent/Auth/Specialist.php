@@ -3,10 +3,9 @@
 namespace Library\Eloquent\Auth;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Library\Eloquent\Company;
-use Library\Eloquent\Department;
 
 class Specialist extends Authenticatable
 {
