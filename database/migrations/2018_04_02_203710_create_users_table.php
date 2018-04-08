@@ -19,12 +19,14 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->unsignedInteger('company_id');
+            $table->unsignedInteger('department_id')->nullable();
             $table->string('type');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
 
             $table->foreign('company_id')->references('id')->on('companies');
+            $table->foreign('department_id')->references('id')->on('departments');
         });
     }
 
