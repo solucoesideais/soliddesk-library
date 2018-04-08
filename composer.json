@@ -14,7 +14,8 @@
         "Library\\Providers\\EloquentFactoriesServiceProvider",
         "Library\\Providers\\MigrationsServiceProvider",
         "Library\\Providers\\TimezoneServiceProvider",
-        "Library\\Providers\\BladeServiceProvider"
+        "Library\\Providers\\BladeServiceProvider",
+        "Library\\Providers\\EventServiceProvider"
       ]
     }
   }

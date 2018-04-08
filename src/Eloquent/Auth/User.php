@@ -8,6 +8,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Library\Eloquent\Company;
 use Library\Eloquent\Department;
 
+/**
+ * @property int department_id
+ * @property int company_id
+ * @property Company company
+ */
 class User extends Authenticatable
 {
     use Notifiable, SoftDeletes;
