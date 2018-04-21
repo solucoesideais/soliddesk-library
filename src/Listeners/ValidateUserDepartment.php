@@ -12,20 +12,20 @@ class ValidateUserDepartment
      */
     public function handle(User $user)
     {
-        if ($this->isInvalidDepartment($user)) {
+        if (! $this->isValidDepartment($user)) {
             throw DepartmentException::companyNotLinked($user->department_id, $user->company_id);
         }
     }
 
-    private function isInvalidDepartment(User $user): bool
+    private function isValidDepartment(User $user): bool
     {
         if ($user->department_id === null) {
-            return false;
+            return true;
         }
 
         return $user->company
                 ->departments()
                 ->wherePivotIn('department_id', [$user->department_id])
-                ->count() == 0;
+                ->count() > 0;
     }
 }
