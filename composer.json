@@ -15,7 +15,8 @@
         "Library\\Providers\\MigrationsServiceProvider",
         "Library\\Providers\\TimezoneServiceProvider",
         "Library\\Providers\\BladeServiceProvider",
-        "Library\\Providers\\EventServiceProvider"
+        "Library\\Providers\\EventServiceProvider",
+        "Library\\Providers\\MysqlServiceProvider"
       ]
     }
   }
