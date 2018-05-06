@@ -16,7 +16,7 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('logo');
+            $table->string('logo')->default('default-avatar.png');
             $table->timestamp('blocked_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
